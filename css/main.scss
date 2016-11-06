@@ -40,7 +40,7 @@ body {
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
 	color: lighten($color-1, 40%);
-	//background-color: $color-1;
+	background-color: $color-1;
 }
 
 @include MQ(L) {
