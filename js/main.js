@@ -1,3 +1,26 @@
+
+// HEADER
+document.addEventListener('DOMContentLoaded', documentReady);
+function documentReady() {
+    var headerMain = document.getElementById('headerMain');
+    var headerName = headerMain.getElementsByTagName('h1')[0];
+    var headerCV = headerMain.getElementsByTagName('h3')[0];
+
+    setTimeout(function () {
+        headerMain.classList.remove('state__init');
+        goLeft(headerName);
+        goLeft(headerCV);
+    }, 1000);
+
+    function goLeft(el) {
+        console.log(el.offsetParent)
+        el.style.position = 'absolute';
+        //el.style.left = 0;
+    }
+
+    document.removeEventListener('DOMContentLoaded', documentReady);
+}
+
     //open interest point description
     var points = document.getElementsByClassName('cd-single-point');
     var initEl = document.getElementById('cd-start');
